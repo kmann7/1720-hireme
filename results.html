@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Results | Hirefly Futures</title>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;display=swap" rel="stylesheet">
+
+    <!-- FAVICON LINKS -->
+    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Hirefly Futures">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- OPEN GRAPH TAGS -->
+    <meta property="og:title" content="Application Results | Hirefly Futures">
+    <meta property="og:description" content="Review your Hirefly Futures application details.">
+    <meta property="og:image" content="https://kmann7.github.io/1720-hireme/images/opengraph-results.png">
+    <meta property="og:url" content="https://kmann7.github.io/1720-hireme/results.html">
+    <meta property="og:logo" content="https://kmann7.github.io/1720-hireme/images/logo.svg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- SCRIPTS -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/year.js" defer></script>
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.svg" alt="Hirefly Futures" width="138" height="50">
+        <button id="hamburger" class="hamburger" aria-label="Navigation links"></button>
+    </header>
+
+    <nav id="navbar">
+        <ul>
+            <li><a href="index.html#candidates">Candidates</a></li>
+            <li><a href="index.html#employers">Employers</a></li>
+            <li><a href="index.html#apply">Apply</a></li>
+            <li class="active"><a href="results.html" aria-current="page">Results</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Application Results</h1>
+
+        <div id="results" class="results"></div>
+
+        <p><a href="index.html#apply">Return to the application</a></p>
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="https://www.youtube.com/@KanMann007" target="_blank"><img src="images/icon-youtube.svg"
+                    alt="YouTube" width="16" height="16"></a>
+            <a href="https://github.com/kmann7" target="_blank"><img src="images/icon-github.svg"
+                    alt="GitHub" width="16" height="16"></a>
+            <a href="https://www.linkedin.com/in/kanyon-mann/" target="_blank"><img src="images/icon-linkedin.svg"
+                    alt="LinkedIn" width="16" height="16"></a>
+            <a href="https://www.facebook.com/kanyon.mann.58" target="_blank"><img src="images/icon-facebook.svg"
+                    alt="Facebook" width="16" height="16"></a>
+        </div>
+        <p>&copy; <span id="currentyear"></span> &bull; Kanyon Mann &bull; DWDD1720</p>
+    </footer>
+</body>
+
+</html>

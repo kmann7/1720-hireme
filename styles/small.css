@@ -1,0 +1,298 @@
+/************************** COLOR SCHEME **************************/
+:root {
+    --color-primary: #973BA3;
+    --color-secondary: #45A33B;
+
+    /* Series of gray colors */
+    --color-mygrey-05: lab(98% 0 0);
+    --color-mygrey-10: lab(97% 0 0);
+    --color-mygrey-20: lab(91% 0 0);
+    --color-mygrey-30: lab(85% 0 0);
+    --color-mygrey-40: lab(66% 0 0);
+    --color-mygrey-50: lab(48% 0 0);
+    --color-mygrey-60: lab(34% 0 0);
+    --color-mygrey-70: lab(27% 0 0);
+    --color-mygrey-80: lab(15% 0 0);
+    --color-mygrey-90: lab(8% 0 0);
+    --color-mygrey-95: lab(3% 0 0);
+}
+
+/************************** BORDER BOX **************************/
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/************************** BODY TAGS **************************/
+body {
+    font-family: "Lato", sans-serif;
+    color: var(--color-mygrey-90);
+    background-color: #FFFFFF;
+}
+
+/************************** HEADER **************************/
+header {
+    padding: 16px 10px;
+    display: grid;
+    grid-template-columns: auto 44px;
+    align-items: center;
+    column-gap: 8px;
+    border-bottom: 1px solid var(--color-mygrey-20);
+}
+
+header img {
+    display: block;
+    width: 138px;
+    height: 50px;
+}
+
+/************************** NAVIGATION **************************/
+nav {
+    background-color: var(--color-mygrey-10);
+    display: none;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav a {
+    display: block;
+    font-size: .9rem;
+    font-weight: 700;
+    color: var(--color-mygrey-60);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: .8rem 10px;
+    border-bottom: 1px solid var(--color-mygrey-20);
+}
+
+nav a:hover {
+    background-color: var(--color-mygrey-20);
+}
+
+nav li.active a {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+nav.show {
+    display: block;
+}
+
+/************************** HAMBURGER **************************/
+.hamburger {
+    background: none;
+    border: none;
+    color: var(--color-mygrey-90);
+    cursor: pointer;
+    font-size: 2rem;
+    width: 44px;
+    height: 44px;
+}
+
+.hamburger::before {
+    content: "\2630";
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+}
+
+/************************** MAIN STUFF **************************/
+main {
+    padding-bottom: 1.5rem;
+}
+
+h1,
+h2 {
+    font-family: "Fira Sans", sans-serif;
+}
+
+h1 {
+    font-size: 1.85rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin: 1rem 10px;
+}
+
+main p {
+    line-height: 1.5;
+    margin: .5rem 10px 1rem;
+}
+
+main a {
+    color: var(--color-primary);
+}
+
+/************************** SIDE BY SIDE PANELS **************************/
+.sbs section {
+    padding: 2rem 10px;
+    text-align: center;
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+}
+
+.sbs section:last-child {
+    background-color: var(--color-secondary);
+    color: var(--color-mygrey-95);
+}
+
+.sbs p {
+    font-size: 1.2rem;
+    margin: 0 0 1rem;
+}
+
+.sbs h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 1.5rem;
+}
+
+.sbs a {
+    display: inline-block;
+    padding: .75rem 1rem;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.sbs section:last-child a {
+    color: var(--color-mygrey-95);
+}
+
+.sbs a:hover {
+    text-decoration: underline;
+}
+
+/************************** FORM LAYOUT **************************/
+form {
+    margin: 1rem 10px;
+
+    label {
+        display: block;
+        font-size: .7rem;
+        padding-top: .2rem;
+        color: var(--color-mygrey-40);
+        text-transform: uppercase;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="email"],
+    textarea,
+    select {
+        display: block;
+        margin: .1rem 0 1rem 0;
+        padding: .6rem 10px;
+        border: 1px solid var(--color-mygrey-10);
+        border-radius: 4px;
+        border-left-width: 5px;
+        border-left-color: var(--color-mygrey-10);
+        font-size: .8rem;
+        background-color: var(--color-mygrey-05);
+        width: 90%;
+
+        &::placeholder {
+            color: var(--color-mygrey-30);
+        }
+    }
+
+    input:required {
+        border-left-color: var(--color-primary);
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+        border-left-color: var(--color-secondary);
+        outline: 2px solid var(--color-primary);
+    }
+
+    input:required:valid {
+        border-left-color: var(--color-secondary);
+    }
+}
+
+input[type="submit"] {
+    border: none;
+    text-align: center;
+    background-color: var(--color-secondary);
+    color: var(--color-mygrey-10);
+    border-radius: 1rem;
+    padding: .75rem 1.5rem;
+    margin: 2rem 0;
+    font-size: 1rem;
+    -webkit-appearance: none;
+    appearance: none;
+
+    &:hover {
+        box-shadow: 0 0 10px var(--color-mygrey-90);
+    }
+}
+
+/************************** FORM RESULTS **************************/
+.results {
+    background-color: var(--color-mygrey-05);
+    margin: 0 10px 1rem 10px;
+    padding: 10px;
+    border: 1px solid var(--color-mygrey-40);
+    border-radius: 6px;
+
+    p {
+        padding: 5px 0;
+        font-weight: 300;
+        color: var(--color-secondary);
+    }
+
+    span {
+        font-weight: 400;
+        color: var(--color-mygrey-50);
+    }
+}
+
+/************************** SOCIAL STUFF **************************/
+.social {
+    display: flex;
+    justify-content: center;
+    column-gap: 5px;
+    margin-bottom: 1rem;
+}
+
+.social img {
+    display: block;
+    width: 22px;
+    height: 22px;
+}
+
+.social a {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.social a:hover {
+    background-color: rgba(255, 255, 255, .9);
+}
+
+/************************** FOOTER **************************/
+footer {
+    background-color: var(--color-mygrey-20);
+    padding: 1rem 10px;
+    text-align: center;
+    font-weight: 400;
+    font-size: .85rem;
+}
+
+footer p {
+    margin: 0;
+}
